@@ -43,55 +43,52 @@ class _DashboardState extends State<Dashboard> {
   }
 
   Widget bottomNavigationBar() {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 12.0),
-      child: BottomNavigationBar(
-        backgroundColor: CColors.primary,
-        items: [
-          BottomNavigationBarItem(
-              backgroundColor: CColors.primary,
-              icon: Image(
-                image: AssetImage(AppIcons.home),
-                width: 25,
+    return BottomNavigationBar(
+      backgroundColor: CColors.primary,
+      items: [
+        BottomNavigationBarItem(
+            backgroundColor: CColors.primary,
+            icon: Image(
+              image: AssetImage(AppIcons.home),
+              width: 25,
+            ),
+            label: "Home"),
+        BottomNavigationBarItem(
+            backgroundColor: CColors.primary,
+            icon: Image(
+              image: AssetImage(AppIcons.search),
+              width: 25,
+            ),
+            label: "Discover"),
+        BottomNavigationBarItem(
+            backgroundColor: CColors.primary,
+            icon: Container(
+              width: width * 0.2,
+              height: height * 0.05,
+              decoration: BoxDecoration(
+                  gradient: CColors.blueGradient,
+                  borderRadius: BorderRadius.circular(10)),
+              child: const Icon(
+                Icons.add,
+                color: Colors.black,
               ),
-              label: "Home"),
-          BottomNavigationBarItem(
-              backgroundColor: CColors.primary,
-              icon: Image(
-                image: AssetImage(AppIcons.search),
-                width: 25,
-              ),
-              label: "Discover"),
-          BottomNavigationBarItem(
-              backgroundColor: CColors.primary,
-              icon: Container(
-                width: width * 0.2,
-                height: height * 0.05,
-                decoration: BoxDecoration(
-                    gradient: CColors.blueGradient,
-                    borderRadius: BorderRadius.circular(10)),
-                child: const Icon(
-                  Icons.add,
-                  color: Colors.black,
-                ),
-              ),
-              label: "Discover"),
-          BottomNavigationBarItem(
-              backgroundColor: CColors.primary,
-              icon: Image(
-                image: AssetImage(AppIcons.work),
-                width: 25,
-              ),
-              label: "Deals"),
-          BottomNavigationBarItem(
-              backgroundColor: CColors.primary,
-              icon: Image(
-                image: AssetImage(AppIcons.profile),
-                width: 25,
-              ),
-              label: "Profile")
-        ],
-      ),
+            ),
+            label: "Discover"),
+        BottomNavigationBarItem(
+            backgroundColor: CColors.primary,
+            icon: Image(
+              image: AssetImage(AppIcons.work),
+              width: 25,
+            ),
+            label: "Deals"),
+        BottomNavigationBarItem(
+            backgroundColor: CColors.primary,
+            icon: Image(
+              image: AssetImage(AppIcons.profile),
+              width: 25,
+            ),
+            label: "Profile")
+      ],
     );
   }
 }
